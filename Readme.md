@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Елена Асташина](https://up.htmlacademy.ru/adaptive/22/user/200761).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Дроганов](https://htmlacademy.ru/profile/dmdragon).
 
 ---
 
