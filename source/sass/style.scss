@@ -1,1 +1,16 @@
-// Начните писать стили здесь
+@import "general/fonts.scss";
+@import "general/variables.scss";
+@import "general/general.scss";
+@import "blocks/page.scss";
+@import "blocks/logo.scss";
+@import "blocks/header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/intro.scss";
+@import "blocks/goals.scss";
+@import "blocks/goal-card.scss";
+@import "blocks/work-description.scss";
+@import "blocks/example.scss";
+@import "blocks/slider-controls.scss";
+@import "blocks/footer.scss";
+@import "blocks/contacts.scss";
+@import "blocks/socials.scss";

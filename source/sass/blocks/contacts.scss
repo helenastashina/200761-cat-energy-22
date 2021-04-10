@@ -1,0 +1,24 @@
+.contacts {
+  //todo
+}
+
+.contacts__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 28px 20px;
+}
+
+.contacts__lead {
+  margin: 0;
+  font-family: $secondary-font-family;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.contacts__map-image {
+  display: block;
+  width: 100%;
+}
