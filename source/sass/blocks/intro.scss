@@ -1,0 +1,56 @@
+.intro {
+  padding: 27px 0 22px;
+  position: relative;
+  text-align: center;
+  color: $basic-white;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 65%;
+  }
+
+  &::before {
+    background-image: url("../../img/index-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &::after {
+    background-color: rgba($main-brand-color, 0.85);
+  }
+}
+
+.intro__container {
+  position: relative;
+  z-index: 1;
+}
+
+.intro__title {
+  margin: 0 0 25px;
+  font-family: $secondary-font-family;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 36px;
+}
+
+.intro__slogan {
+  margin: 0 0 29px;
+  font-family: $secondary-font-family;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.intro__img {
+  display: block;
+  width: 100%;
+  margin: 0 0 3px;
+}

@@ -1,0 +1,36 @@
+.slider-controls {
+  display: flex;
+  align-items: center;
+}
+
+.slider-controls__label {
+  margin: 0;
+  font-family: $secondary-font-family;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $main-title-color;
+}
+
+.slider-controls__toggle {
+  position: relative;
+  width: 84px;
+  height: 14px;
+  margin: 0 13px;
+  background-color: $basic-white;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    display: block;
+    width: 35px;
+    height: 6px;
+    background: $main-brand-color;
+    border-radius: 6px;
+  }
+}
