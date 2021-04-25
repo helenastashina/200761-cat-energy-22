@@ -1,0 +1,27 @@
+.products-more {
+  padding: 25px 0;
+  text-align: center;
+}
+
+.products-more__title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-family: $secondary-font-family;
+  font-weight: normal;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+
+
+  &::before {
+    content: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='15' x2='15' y2='30' stroke='%23D3D3D3' stroke-width='2'/%3E%3Cline x1='30' y1='15' y2='15' stroke='%23D3D3D3' stroke-width='2'/%3E%3C/svg%3E%0A");
+    display: block;
+    margin: 0 auto 23px;
+  }
+}
+
+.products-more__label {
+  margin: 0 0 20px;
+  font-size: 12px;
+  line-height: 16px;
+}

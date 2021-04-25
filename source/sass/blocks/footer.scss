@@ -1,5 +1,9 @@
 .footer {
-  //todo
+  background-color: $main-bg;
+
+  &--white {
+    background-color: $basic-white;
+  }
 }
 
 .footer__main {
