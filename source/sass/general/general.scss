@@ -68,6 +68,19 @@ img {
   &:active {
     color: rgba($basic-white, 0.3);
   }
+
+  &--grey {
+    color: $main-text-color;
+    background: $main-bg;
+
+    &:hover {
+      background-color: $secondary-special-grey;
+    }
+
+    &:active {
+      color: rgba($main-text-color, 0.3);
+    }
+  }
 }
 
 .page-title {
