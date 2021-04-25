@@ -1,0 +1,42 @@
+.base-radio {
+  display: flex;
+  align-items: center;
+}
+
+.base-radio__text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $secondary-dark-grey;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    border-radius: 50%;
+    border: 1px solid $special-grey;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $main-brand-color;
+    opacity: 0;
+    transition: $base-transition;
+  }
+}
+
+.base-radio__input:checked + .base-radio__text::after {
+  opacity: 1;
+}

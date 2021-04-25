@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
 <header class="header">
@@ -70,7 +73,11 @@
         </fieldset>
       </section>
       <section class="program-form__section">
-        <h2 class="program-form__subtitle page-subtitle">Контактные данные (владельца кота)</h2>
+        <h2 class="program-form__subtitle page-subtitle">
+          <span>
+            Контактные данные <br>(владельца кота)
+          </span>
+        </h2>
         <div class="program-form__group">
           <label class="program-form__label" for="owner-email">E-mail:*</label>
           <input class="program-form__input base-input" id="owner-email" name="owner-email" type="email" value="kuklachev@gmail.com" required>
@@ -81,29 +88,33 @@
         </div>
       </section>
       <section class="program-form__section">
-        <h2 class="program-form__subtitle page-subtitle">Комментарий</h2>
+        <h2 class="program-form__subtitle page-subtitle">
+          <span>Комментарий</span>
+        </h2>
         <div class="program-form__group">
           <label class="visually-hidden" for="message">Расскажите обо всех повадках кота</label>
           <textarea class="program-form__textarea base-textarea" name="message" id="message" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
       </section>
       <section class="program-form__section">
-        <h2 class="program-form__subtitle page-subtitle">Дополнительно</h2>
+        <h2 class="program-form__subtitle page-subtitle">
+          <span>Дополнительно</span>
+        </h2>
         <fieldset class="program-form__fieldset program-form__fieldset--unbordered">
           <label class="program-form__checkbox base-checkbox">
-            <input class="base-checkbox__input visually-hidden" name="additionally" value="сахарозаменитель" type="radio" checked>
+            <input class="base-checkbox__input visually-hidden" name="additionally" value="сахарозаменитель" type="checkbox" checked>
             <span class="base-checkbox__text">сахарозаменитель</span>
           </label>
           <label class="program-form__checkbox base-checkbox">
-            <input class="base-checkbox__input visually-hidden" name="additionally" value="питьевая вода" type="radio">
+            <input class="base-checkbox__input visually-hidden" name="additionally" value="питьевая вода" type="checkbox">
             <span class="base-checkbox__text">питьевая вода</span>
           </label>
           <label class="program-form__checkbox base-checkbox">
-            <input class="base-checkbox__input visually-hidden" name="additionally" value="молоко" type="radio">
+            <input class="base-checkbox__input visually-hidden" name="additionally" value="молоко" type="checkbox">
             <span class="base-checkbox__text">молоко</span>
           </label>
           <label class="program-form__checkbox base-checkbox">
-            <input class="base-checkbox__input visually-hidden" name="additionally" value="витамины" type="radio">
+            <input class="base-checkbox__input visually-hidden" name="additionally" value="витамины" type="checkbox">
             <span class="base-checkbox__text">витамины</span>
           </label>
         </fieldset>
@@ -117,7 +128,7 @@
 </main>
 <footer class="footer">
   <section class="contacts footer__contacts">
-    <div class="container">
+    <div class="container contacts__container">
       <h2 class="visually-hidden">Как нас найти</h2>
       <p class="contacts__lead">приглашаем
                                 к&nbsp;сотрудничеству дилеров!</p>
