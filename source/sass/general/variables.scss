@@ -17,7 +17,14 @@ $main-brand-color: $basic-green;
 $main-text-color: $special-dark-grey;
 $main-title-color: $basic-black;
 $main-bg: $basic-grey;
+$dark-bg: #eaeaea;
 $border-color: $secondary-grey;
 $control-border-color: $light-grey;
 
 $base-transition: all 0.5s ease;
+
+// Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$mobile-width-only: 767px;

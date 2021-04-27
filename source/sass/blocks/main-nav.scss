@@ -1,5 +1,6 @@
 .main-nav {
-  //todo
+  grid-column: 1/-1;
+  grid-row: 2/3;
 }
 
 .main-nav__hamburger {
@@ -7,6 +8,11 @@
   background-color: transparent;
   border: 0;
   padding: 8px 0;
+  margin: -35px 0 20px auto;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__hamburger-line {
@@ -41,10 +47,28 @@
   padding: 0;
   margin: 0;
   background-color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: transparent;
+  }
 }
 
 .main-nav__item {
   border-bottom: 1px solid $border-color;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 0;
+    margin-left: 35px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
 }
 
 .main-nav__link {
@@ -58,4 +82,20 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 0;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    border-bottom: 2px solid transparent;
+
+    &.active {
+      border-bottom: 2px solid $main-brand-color;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
+  }
 }
