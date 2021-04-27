@@ -12,6 +12,11 @@
   text-transform: uppercase;
   color: $secondary-dark-grey;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -20,6 +25,12 @@
     margin-right: 15px;
     border-radius: 50%;
     border: 1px solid $special-grey;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+      margin-right: 20px;
+    }
   }
 
   &::after {
@@ -34,6 +45,13 @@
     background-color: $main-brand-color;
     opacity: 0;
     transition: $base-transition;
+
+    @media (min-width: $tablet-width) {
+      left: 11px;
+      top: 11px;
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 

@@ -38,6 +38,16 @@ img {
     max-width: 1280px;
     padding: 0 30px;
   }
+
+  &--sm {
+    @media (min-width: $tablet-width) {
+      padding: 0 70px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 30px;
+    }
+  }
 }
 
 
@@ -122,6 +132,11 @@ img {
   line-height: 26px;
   color: $main-title-color;
 
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 1;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -142,6 +157,15 @@ img {
     padding: 0 20px;
     margin-left: -20px;
     background-color: $basic-white;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 40px;
+      margin-left: -40px;
+
+      br {
+        display: none;
+      }
+    }
   }
 }
 
@@ -153,6 +177,12 @@ img {
   color: $main-text-color;
   text-transform: uppercase;
   border: 1px solid $control-border-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 19px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .base-textarea {
@@ -164,4 +194,10 @@ img {
   text-transform: uppercase;
   border: 1px solid $control-border-color;
   resize: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

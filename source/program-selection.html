@@ -9,10 +9,10 @@
 </head>
 <body class="page__body">
 <header class="header">
-  <div class="container">
+  <div class="container header__container">
     <div class="logo">
       <a class="logo__link">
-        <img class="logo__img logo__img" src="img/logo-part.svg" width="34" height="38" alt="Логотип Кэт энерджи">
+        <img class="logo__img" src="img/logo-part.svg" width="34" height="38" alt="Логотип Кэт энерджи">
         <img class="logo__text-img" src="img/cat-energy.svg" width="101" height="18" alt="Текстовый логотип Кэт энерджи">
       </a>
     </div>
@@ -25,18 +25,18 @@
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-        </li>
         <li class="main-nav__item main-nav__item--current">
-          <a class="main-nav__link">Подбор программы</a>
+          <a class="main-nav__link">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="program-selection.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
 <main class="page-program">
-  <div class="container">
+  <div class="container container--sm">
     <h1 class="page-program__title page-title">Подбор программы</h1>
     <p class="page-program__lead">Заполните анкету, и&nbsp;мы&nbsp;подберем программу питания для вашего кота</p>
     <form class="program-form" method="post" action="https://echo.htmlacademy.ru">
@@ -101,22 +101,24 @@
           <span>Дополнительно</span>
         </h2>
         <fieldset class="program-form__fieldset program-form__fieldset--unbordered">
-          <label class="program-form__checkbox base-checkbox">
-            <input class="base-checkbox__input visually-hidden" name="additionally" value="сахарозаменитель" type="checkbox" checked>
-            <span class="base-checkbox__text">сахарозаменитель</span>
-          </label>
-          <label class="program-form__checkbox base-checkbox">
-            <input class="base-checkbox__input visually-hidden" name="additionally" value="питьевая вода" type="checkbox">
-            <span class="base-checkbox__text">питьевая вода</span>
-          </label>
-          <label class="program-form__checkbox base-checkbox">
-            <input class="base-checkbox__input visually-hidden" name="additionally" value="молоко" type="checkbox">
-            <span class="base-checkbox__text">молоко</span>
-          </label>
-          <label class="program-form__checkbox base-checkbox">
-            <input class="base-checkbox__input visually-hidden" name="additionally" value="витамины" type="checkbox">
-            <span class="base-checkbox__text">витамины</span>
-          </label>
+          <div class="program-form__fieldset-inner">
+            <label class="program-form__checkbox base-checkbox">
+              <input class="base-checkbox__input visually-hidden" name="additionally" value="сахарозаменитель" type="checkbox" checked>
+              <span class="base-checkbox__text">сахарозаменитель</span>
+            </label>
+            <label class="program-form__checkbox base-checkbox">
+              <input class="base-checkbox__input visually-hidden" name="additionally" value="питьевая вода" type="checkbox">
+              <span class="base-checkbox__text">питьевая вода</span>
+            </label>
+            <label class="program-form__checkbox base-checkbox">
+              <input class="base-checkbox__input visually-hidden" name="additionally" value="молоко" type="checkbox">
+              <span class="base-checkbox__text">молоко</span>
+            </label>
+            <label class="program-form__checkbox base-checkbox">
+              <input class="base-checkbox__input visually-hidden" name="additionally" value="витамины" type="checkbox">
+              <span class="base-checkbox__text">витамины</span>
+            </label>
+          </div>
         </fieldset>
       </section>
       <div class="program-form__bottom">
@@ -129,19 +131,21 @@
 <footer class="footer">
   <section class="contacts footer__contacts">
     <div class="container contacts__container">
-      <h2 class="visually-hidden">Как нас найти</h2>
-      <p class="contacts__lead">приглашаем
-                                к&nbsp;сотрудничеству дилеров!</p>
-      <address class="contacts__address">
-        ул. Большая
-        Конюшенная, д. 19/8
-        Санкт-Петербург
-      </address>
+      <div class="contacts__wrap">
+        <h2 class="visually-hidden">Как нас найти</h2>
+        <p class="contacts__lead">приглашаем
+                                  к&nbsp;сотрудничеству дилеров!</p>
+        <address class="contacts__address">
+          ул. Большая
+          Конюшенная, д. 19/8
+          <span class="contacts__city">Санкт-Петербург</span>
+        </address>
+      </div>
     </div>
     <img class="contacts__map-image" src="img/location-xs.png" width="320" height="362" alt="Карта с отметкой офиса Кэт энерджи">
   </section>
   <div class="footer__main">
-    <div class="container">
+    <div class="footer__container container">
       <a class="footer__logo-link">
         <img class="footer__logo-img" src="img/cat-energy.svg" width="128" height="24" alt="Текстовый логотип Кэт энерджи">
       </a>
