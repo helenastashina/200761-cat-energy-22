@@ -12,9 +12,21 @@
   text-align: center;
 }
 
+.footer__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 .footer__logo-link {
   display: inline-block;
   margin: 0 auto 32px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .footer__logo-img {
@@ -26,6 +38,10 @@
   padding: 20px 0;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    border: 0;
+  }
 }
 
 .footer__copyright {
@@ -43,4 +59,8 @@
   display: flex;
   width: 27px;
   height: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 22px;
+  }
 }

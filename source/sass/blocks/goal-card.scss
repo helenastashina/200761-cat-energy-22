@@ -1,6 +1,20 @@
 .goal-card {
   background-color: $main-bg;
   padding: 24px 20px 22px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: repeat(3, min-content);
+    align-items: center;
+    padding: 77px 62px 53px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 62px;
+    min-height: 100%;
+  }
 }
 
 .goal-card__title {
@@ -11,12 +25,32 @@
   line-height: 37px;
   color: $main-title-color;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
 }
 
 .goal-card__description {
   padding: 0 0 23px;
   margin: 0 0 19px;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    border-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/-1;
+  }
 }
 
 .goal-card__link {
@@ -29,6 +63,16 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $main-title-color;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/-1;
+  }
 
   &::after {
     content: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='6' x2='26' y2='6' stroke='black' stroke-width='2'/%3E%3Cpath d='M32 6L25.25 11.1962L25.25 0.803848L32 6Z' fill='black'/%3E%3C/svg%3E%0A");
@@ -46,6 +90,20 @@
   height: 50px;
   background: $main-brand-color;
   border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    height: 100px;
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
 }
 
 .goal-card__icon-svg {
@@ -57,6 +115,16 @@
     height: 50px;
     left: 7px;
     bottom: 3px;
+
+    @media (min-width: $tablet-width) {
+      width: 140px;
+      height: 192px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 70px;
+      height: 97px;
+    }
   }
 
   &--leopard {
@@ -64,5 +132,15 @@
     height: 28px;
     bottom: 11px;
     left: -10px;
+
+    @media (min-width: $tablet-width) {
+      width: 268px;
+      height: 112px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 134px;
+      height: 56px;
+    }
   }
 }
