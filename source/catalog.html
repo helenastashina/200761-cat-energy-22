@@ -9,10 +9,10 @@
 </head>
 <body class="page__body">
 <header class="header">
-  <div class="container">
+  <div class="container header__container">
     <div class="logo">
       <a class="logo__link">
-        <img class="logo__img logo__img" src="img/logo-part.svg" width="34" height="38" alt="Логотип Кэт энерджи">
+        <img class="logo__img" src="img/logo-part.svg" width="34" height="38" alt="Логотип Кэт энерджи">
         <img class="logo__text-img" src="img/cat-energy.svg" width="101" height="18" alt="Текстовый логотип Кэт энерджи">
       </a>
     </div>
@@ -25,11 +25,11 @@
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
         </li>
-        <li class="main-nav__item main-nav__item--current">
-          <a class="main-nav__link">Каталог продукции</a>
-        </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="program-selection.html">Подбор программы</a>
+          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item main-nav__item--current">
+          <a class="main-nav__link">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -176,7 +176,7 @@
         </li>
         <li class="products__item">
           <div class="products-more">
-            <h3 class="products-more__title">Показать еще 100500 товаров</h3>
+            <h3 class="products-more__title">Показать еще <br>100500 товаров</h3>
             <p class="products-more__label">На самом деле вкусов гораздо больше!</p>
             <a class="products-more__button button button--grey" href="#" aria-label="Посмотреть все товары Cat Energy PRO">показать все</a>
           </div>
@@ -223,7 +223,7 @@
               <dt>1 литр</dt>
               <dd>100 Р.</dd>
             </dl>
-            <a class="product-card__button button" href="#" aria-label="Перейти к оформлению товара молоко">молоко</a>
+            <a class="product-card__button button" href="#" aria-label="Перейти к оформлению товара молоко">заказать</a>
           </div>
         </li>
         <li class="additional-products__item">
@@ -239,29 +239,30 @@
           </div>
         </li>
       </ul>
+      <div class="catalog-present">
+        <p class="catalog-present__text">Закажите все и&nbsp;получите чехол для кота в&nbsp;подарок!</p>
+      </div>
     </section>
-
-    <div class="catalog-present">
-      <p class="catalog-present__text">Закажите все и&nbsp;получите чехол для кота в&nbsp;подарок!</p>
-    </div>
   </div>
 </main>
 <footer class="footer">
   <section class="contacts footer__contacts">
     <div class="container contacts__container">
-      <h2 class="visually-hidden">Как нас найти</h2>
-      <p class="contacts__lead">приглашаем
-                                к&nbsp;сотрудничеству дилеров!</p>
-      <address class="contacts__address">
-        ул. Большая
-        Конюшенная, д. 19/8
-        Санкт-Петербург
-      </address>
+      <div class="contacts__wrap">
+        <h2 class="visually-hidden">Как нас найти</h2>
+        <p class="contacts__lead">приглашаем
+                                  к&nbsp;сотрудничеству дилеров!</p>
+        <address class="contacts__address">
+          ул. Большая
+          Конюшенная, д. 19/8
+          <span class="contacts__city">Санкт-Петербург</span>
+        </address>
+      </div>
     </div>
     <img class="contacts__map-image" src="img/location-xs.png" width="320" height="362" alt="Карта с отметкой офиса Кэт энерджи">
   </section>
   <div class="footer__main">
-    <div class="container">
+    <div class="footer__container container">
       <a class="footer__logo-link">
         <img class="footer__logo-img" src="img/cat-energy.svg" width="128" height="24" alt="Текстовый логотип Кэт энерджи">
       </a>
