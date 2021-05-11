@@ -80,21 +80,21 @@
 
   &:first-of-type {
     &::before {
-      background-image: url("../../img/icons/icon_leaf.svg");
+      background-image: url("../img/icons/icon_leaf.svg");
       background-size: 30px 32px;
     }
   }
 
   &:nth-of-type(2) {
     &::before {
-      background-image: url("../../img/icons/icon_tub.svg");
+      background-image: url("../img/icons/icon_tub.svg");
       background-size: 29px 31px;
     }
   }
 
   &:nth-of-type(3) {
     &::before {
-      background-image: url("../../img/icons/icon_eat.svg");
+      background-image: url("../img/icons/icon_eat.svg");
       background-size: 25px 30px;
     }
   }
@@ -103,7 +103,7 @@
     margin-bottom: 0;
 
     &::before {
-      background-image: url("../../img/icons/icon_alarm.svg");
+      background-image: url("../img/icons/icon_alarm.svg");
       background-size: 32px 33px;
     }
   }

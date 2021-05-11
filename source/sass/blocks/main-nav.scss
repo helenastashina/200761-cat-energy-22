@@ -1,6 +1,10 @@
 .main-nav {
-  grid-column: 1/-1;
-  grid-row: 2/3;
+  position: relative;
+
+  &--nojs {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
 }
 
 .main-nav__hamburger {
@@ -8,7 +12,7 @@
   background-color: transparent;
   border: 0;
   padding: 8px 0;
-  margin: -35px 0 20px auto;
+  margin: 0 0 0 auto;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -43,12 +47,21 @@
 }
 
 .main-nav__list {
-  list-style: none;
   padding: 0;
   margin: 0;
+  list-style: none;
   background-color: $basic-white;
 
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    right: -20px;
+    top: 52px;
+    z-index: 5;
+    width: 100vw;
+  }
+
   @media (min-width: $tablet-width) {
+    position: static;
     display: flex;
     align-items: center;
   }
@@ -63,11 +76,21 @@
         color: $basic-white;
       }
     }
+
+    .main-nav__item--current {
+      @media (min-width: $desktop-width) {
+        border-bottom: 2px solid $basic-white;
+      }
+    }
   }
 }
 
 .main-nav__item {
   border-bottom: 1px solid $border-color;
+
+  &:first-of-type {
+    border-top: 1px solid $border-color;
+  }
 
   @media (min-width: $tablet-width) {
     border-bottom: 0;
@@ -75,6 +98,11 @@
 
     &:first-of-type {
       margin-left: 0;
+      border-top: 0;
+    }
+
+    &--current {
+      border-bottom: 2px solid $main-brand-color;
     }
   }
 }
@@ -101,5 +129,46 @@
     &.active {
       border-bottom: 2px solid $main-brand-color;
     }
+  }
+}
+
+.main-nav--opened .main-nav__list {
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
+}
+
+.main-nav--opened .main-nav__hamburger-line {
+
+  background-color: transparent;
+
+  &::after {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  &::before {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+
+.main-nav--closed .main-nav__list {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__hamburger {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__list {
+  position: static;
+
+  @media (max-width: $mobile-width-only) {
+    position: static;
+    display: block;
+    margin: 24px -20px -24px;
+    width: auto;
   }
 }
