@@ -7,9 +7,17 @@
 }
 
 .footer__main {
-  padding: 32px 0 0;
+  padding: 37px 0 0;
   background-color: $main-bg;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 36px;
+  }
 }
 
 .footer__container {
@@ -22,10 +30,24 @@
 
 .footer__logo-link {
   display: inline-block;
-  margin: 0 auto 32px;
+  margin: 0 auto 28px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+  }
+}
+
+.footer__logo-link[href] {
+  transition: $base-transition;
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
 
@@ -41,6 +63,7 @@
 
   @media (min-width: $tablet-width) {
     border: 0;
+    padding-left: 30px;
   }
 }
 
@@ -53,12 +76,27 @@
   color: currentColor;
   line-height: 18px;
   text-decoration: none;
+  transition: $base-transition;
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      .footer__creator-logo {
+        color: $main-brand-color;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .footer__creator-logo {
   display: flex;
   width: 27px;
   height: 34px;
+  transition: color 0.5s ease;
+  color: #666666;
 
   @media (min-width: $tablet-width) {
     margin-left: 22px;

@@ -8,18 +8,20 @@
     grid-template-columns: 1fr max-content;
     grid-template-rows: repeat(3, min-content);
     align-items: center;
-    padding: 77px 62px 53px 52px;
+    padding: 77px 62px 57px 52px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: min-content 1fr;
     grid-column-gap: 62px;
     min-height: 100%;
+    padding: 57px 55px 57px 52px;
   }
 }
 
 .goal-card__title {
   margin: 0 0 29px;
+  padding-top: 6px;
   font-family: $secondary-font-family;
   font-size: 24px;
   font-weight: normal;
@@ -29,6 +31,8 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1/2;
+    padding-top: 0;
+    margin-bottom: 25px;
     font-size: 36px;
     line-height: 1;
   }
@@ -36,6 +40,7 @@
   @media (min-width: $desktop-width) {
     grid-row: 1/2;
     grid-column: 2/3;
+    padding-top: 10px;
   }
 }
 
@@ -47,15 +52,30 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1/2;
+    padding: 0 10px 23px 0;
+    margin: 0 0 28px;
     border-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1/-1;
+    padding: 41px 0 0;
+    margin-bottom: 25px;
+  }
+
+  &--sm {
+    @media (min-width: $tablet-width) {
+      padding-right: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 0;
+    }
   }
 }
 
 .goal-card__link {
+  position: relative;
   grid-column: 1/-1;
   display: flex;
   align-items: center;
@@ -66,6 +86,7 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $main-title-color;
+  transition: $base-transition;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/2;
@@ -77,13 +98,32 @@
     grid-column: 1/-1;
   }
 
-  &::after {
-    content: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='6' x2='26' y2='6' stroke='black' stroke-width='2'/%3E%3Cpath d='M32 6L25.25 11.1962L25.25 0.803848L32 6Z' fill='black'/%3E%3C/svg%3E%0A");
-    display: flex;
-    align-items: center;
-    width: 32px;
+  svg {
+    display: block;
+    width: 26px;
     height: 12px;
-    margin-left: 25px;
+    margin-left: 15px;
+    transition: $base-transition;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 23px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 26px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      svg {
+        width: 30px;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -103,6 +143,7 @@
     width: 200px;
     height: 200px;
     margin-right: 0;
+    margin-top: -10px;
   }
 
   @media (min-width: $desktop-width) {
@@ -118,34 +159,42 @@
   display: block;
 
   &--cat {
-    width: 36px;
-    height: 50px;
     left: 7px;
     bottom: 3px;
+    width: 36px;
+    height: 50px;
 
     @media (min-width: $tablet-width) {
+      left: 30px;
+      bottom: 18px;
       width: 140px;
       height: 192px;
     }
 
     @media (min-width: $desktop-width) {
+      left: 16px;
+      bottom: 9px;
       width: 70px;
       height: 97px;
     }
   }
 
   &--leopard {
-    width: 67px;
-    height: 28px;
     bottom: 11px;
     left: -10px;
+    width: 67px;
+    height: 28px;
 
     @media (min-width: $tablet-width) {
+      bottom: 43px;
+      left: -33px;
       width: 268px;
       height: 112px;
     }
 
     @media (min-width: $desktop-width) {
+      bottom: 25px;
+      left: -19px;
       width: 134px;
       height: 56px;
     }

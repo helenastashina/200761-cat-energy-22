@@ -1,8 +1,12 @@
 .page-program {
   padding: 27px 0 32px;
 
+  @media (min-width: $tablet-width) {
+    padding: 32px 0 70px;
+  }
+
   @media (min-width: $desktop-width) {
-    padding-top: 187px;
+    padding: 187px 0 81px;
   }
 }
 

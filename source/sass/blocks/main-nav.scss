@@ -55,7 +55,7 @@
   @media (max-width: $mobile-width-only) {
     position: absolute;
     right: -20px;
-    top: 52px;
+    top: 43px;
     z-index: 5;
     width: 100vw;
   }
@@ -109,7 +109,7 @@
 
 .main-nav__link {
   display: block;
-  padding: 22px 0 24px;
+  padding: 22px 0 23px;
   font-family: $secondary-font-family;
   font-size: 20px;
   font-weight: 500;
@@ -120,7 +120,7 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding: 10px 0;
+    padding: 18px 0 6px;
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
@@ -128,6 +128,25 @@
 
     &.active {
       border-bottom: 2px solid $main-brand-color;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 14px 0 7px;
+    letter-spacing: 1px;
+  }
+}
+
+.main-nav__link[href] {
+  transition: $base-transition;
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
     }
   }
 }
