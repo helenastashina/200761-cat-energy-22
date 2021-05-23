@@ -1,9 +1,16 @@
 .base-checkbox {
   display: flex;
   align-items: center;
+
+  &:focus-within {
+    .base-checkbox__text::before {
+      outline: auto;
+    }
+  }
 }
 
 .base-checkbox__text {
+  cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
@@ -52,8 +59,20 @@
       top: 10px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .base-checkbox__input:checked + .base-checkbox__text::after {
   opacity: 1;
+}
+
+.base-checkbox__input:disabled + .base-checkbox__text {
+  opacity: 0.3;
 }

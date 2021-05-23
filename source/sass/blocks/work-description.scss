@@ -3,9 +3,13 @@
 }
 
 .work-description__title {
-  margin: 0 0 38px;
+  margin: 0 0 41px;
   font-family: $secondary-font-family;
   color: $main-title-color;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 71px;
+  }
 }
 
 .work-description__list {
@@ -16,8 +20,9 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 153px;
-    grid-row-gap: 90px;
+    grid-column-gap: 60px;
+    grid-row-gap: 37px;
+    margin-bottom: 0;
     counter-reset: works;
   }
 
@@ -36,6 +41,8 @@
     position: relative;
     display: block;
     margin: 0;
+    min-height: 280px;
+    max-width: 245px;
     counter-increment: works;
   }
 
@@ -47,8 +54,8 @@
     @media (min-width: $tablet-width) {
       content: counter(works);
       position: absolute;
-      right: 0;
-      top: -0.15em;
+      left: 113px;
+      top: -0.14em;
       z-index: -1;
       font-family: $secondary-font-family;
       font-size: 280px;

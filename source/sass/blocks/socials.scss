@@ -12,13 +12,60 @@
 }
 
 .socials__item {
-  margin: 0 16px;
+  margin: 0 17px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 12px;
+  }
 }
 
 .socials__link {
   display: block;
+  color: #666666;
+  transition: $base-transition;
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      color: $main-brand-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .socials__icon {
   display: block;
+  fill: none;
+
+  &--vk {
+    width: 23px;
+    height: 16px;
+
+    @media (min-width: $tablet-width) {
+      width: 29px;
+      height: 22px;
+    }
+  }
+
+  &--inst {
+    width: 16px;
+    height: 16px;
+
+    @media (min-width: $tablet-width) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &--fb {
+    width: 22px;
+    height: 22px;
+
+    @media (min-width: $tablet-width) {
+      width: 29px;
+      height: 29px;
+    }
+  }
 }

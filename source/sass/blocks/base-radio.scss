@@ -1,9 +1,16 @@
 .base-radio {
   display: flex;
   align-items: center;
+
+  &:focus-within {
+    .base-radio__text::before {
+      outline: auto;
+    }
+  }
 }
 
 .base-radio__text {
+  cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
@@ -53,8 +60,20 @@
       height: 18px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .base-radio__input:checked + .base-radio__text::after {
   opacity: 1;
+}
+
+.base-radio__input:disabled + .base-radio__text {
+  opacity: 0.3;
 }
