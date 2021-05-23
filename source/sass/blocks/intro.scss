@@ -1,11 +1,11 @@
 .intro {
-  padding: 35px 0 22px;
+  padding: 27px 0 22px;
   position: relative;
   text-align: center;
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    padding: 35px 0 2px;
+    padding: 40px 0 2px;
     color: $main-title-color;
     text-align: left;
   }
@@ -44,6 +44,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background@2.jpg");
+    }
 
     @media (min-width: $desktop-width) {
       background-image: url("../img/index-background-desktop.jpg");
@@ -106,6 +110,14 @@
 
   @media (min-width: $desktop-width) {
     margin: 0 0 51px 80px;
+  }
+}
+
+.intro__img-wrap {
+  @media (min-width: $tablet-width) {
+    order: 1;
+    z-index: -1;
+    width: 100%;
   }
 }
 
